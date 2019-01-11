@@ -1,21 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- Copyright 2014 Sandro Mani <manisandro@gmail.com> -->
 <component type="desktop">
-  <id>com.github.manisandro.gImageReader</id>
+  <id>com.github.manisandro.gImageReader-@INTERFACE_TYPE@</id>
   <metadata_license>CC0-1.0</metadata_license>
   <project_license>GPL-3.0+</project_license>
   <name>gImageReader</name>
   <name xml:lang="cs_CZ">gImageReader</name>
-  <summary>A graphical (gtk+3/qt5) frontend to tesseract-ocr</summary>
-  <summary xml:lang="cs_CZ">Grafická (gtk+3/qt5) nadstavba pro engine tesseract-ocr</summary>
+  <summary>A graphical (@INTERFACE_TYPE@) frontend to tesseract-ocr</summary>
+  <summary xml:lang="cs_CZ">Grafická (@INTERFACE_TYPE@) nadstavba pro engine tesseract-ocr</summary>
   <keywords>
     <keyword>ocr</keyword>
     <keyword>optical</keyword>
     <keyword>recognition</keyword>
     <keyword>tesseract</keyword>
     <keyword>pdf</keyword>
-    <keyword>gtk</keyword>
-    <keyword>qt</keyword>
+    <keyword>@INTERFACE_TYPE@</keyword>
   </keywords>
   <keywords xml:lang="cs_CZ">
     <keyword xml:lang="cs_CZ">ocr</keyword>
@@ -50,10 +49,8 @@
   </description>
   <screenshots>
     <screenshot type="default">
-      <image>https://raw.githubusercontent.com/manisandro/gImageReader/gh-pages/gimagereader-gtk.jpg</image>
-      <caption>gImageReader-gtk</caption>
-      <image>https://raw.githubusercontent.com/manisandro/gImageReader/gh-pages/gimagereader-qt5.jpg</image>
-      <caption>gImageReader-qt5</caption>
+      <image>https://raw.githubusercontent.com/manisandro/gImageReader/gh-pages/gimagereader-@INTERFACE_TYPE@.jpg</image>
+      <caption>gImageReader-@INTERFACE_TYPE@</caption>
     </screenshot>
   </screenshots>
   <url type="bugtracker">https://github.com/manisandro/gImageReader/issues</url>
@@ -61,13 +58,11 @@
   <url type="homepage">https://github.com/manisandro/gImageReader</url>
   <url type="translate">https://github.com/manisandro/gImageReader/blob/master/README.md</url>
   <update_contact>manisandro@gmail.com</update_contact>
-  <translation type="gettext">gimagereader-gtk</translation>
-  <translation type="gettext">gimagereader-qt5</translation>
+  <translation type="gettext">gimagereader-@INTERFACE_TYPE@</translation>
   <provides>
-    <binary>gimagereader-gtk</binary>
-    <binary>gimagereader-qt5</binary>
+    <binary>gimagereader-@INTERFACE_TYPE@</binary>
   </provides>
-  <launchable type="desktop-id">com.github.manisandro.gImageReader.desktop</launchable>
+  <launchable type="desktop-id">com.github.manisandro.gImageReader-@INTERFACE_TYPE@.desktop</launchable>
   <content_rating type="oars-1.0">
     <content_attribute id="social-info">mild</content_attribute>
   </content_rating>

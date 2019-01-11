@@ -6,7 +6,7 @@ diff -rupN tesseract-4.0.0/src/ccutil/Makefile.am tesseract-4.0.0-new/src/ccutil
  
  if !NO_TESSDATA_PREFIX
 -AM_CXXFLAGS += -DTESSDATA_PREFIX=@datadir@
-+AM_CXXFLAGS += -DTESSDATA_PREFIX=@datadir@/tesseract/
++AM_CXXFLAGS += -DTESSDATA_PREFIX=@datadir@/tesseract
  endif
  
  if VISIBILITY
@@ -18,7 +18,7 @@ diff -rupN tesseract-4.0.0/src/lstm/Makefile.am tesseract-4.0.0-new/src/lstm/Mak
  
  if !NO_TESSDATA_PREFIX
 -AM_CXXFLAGS += -DTESSDATA_PREFIX=@datadir@
-+AM_CXXFLAGS += -DTESSDATA_PREFIX=@datadir@/tesseract/
++AM_CXXFLAGS += -DTESSDATA_PREFIX=@datadir@/tesseract
  endif
  
  if VISIBILITY
