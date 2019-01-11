@@ -2,7 +2,9 @@
 
 **gImageReader** is a simple optical character recognition (OCR) application which acts as a frontend to the tesseract OCR engine.
 
-![gimagereader-flatpak screenshot](gimagereader-gtk3-flatpak.png)
+![gimagereader-gtk3-flatpak screenshot](gimagereader-gtk3-flatpak.png)
+
+![gimagereader-qt5-flatpak screenshot](gimagereader-qt5-flatpak.png)
 
 [Homepage](https://github.com/manisandro/gImageReader)
 
