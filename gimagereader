@@ -1,0 +1,10 @@
+#!/usr/bin/env bash
+
+qt_regex="KDE|Plasma|TDE|Trinity|DDE|Deepin|Lumina|Liri|theShell|LXQt|Razor|OPIE|QPA|Qt"
+
+if [[ "${XDG_CURRENT_DESKTOP,,}" =~ ${qt_regex,,} ]]; then
+  gimagereader-qt5 "${@}";
+else
+  gimagereader-gtk "${@}";
+fi;
+

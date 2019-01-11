@@ -1,0 +1,16 @@
+name: gtkmm
+config-opts:
+  - --disable-documentation
+  - --enable-maintainer-mode
+sources:
+  - type: archive
+    url: https://ftp.gnome.org/pub/GNOME/sources/gtkmm/3.22/gtkmm-3.22.3.tar.xz
+    sha256: 178c2728a4f37eae986eabdd758547cd7579d15000048596fa6bbc25cbba5c90
+post-install:
+  - install -p -D -m 0644 "COPYING" -t "${FLATPAK_DEST}/share/licenses/gtkmm/";
+modules:
+  - libsigc++.yaml
+  - cairomm.yaml
+  - glibmm.yaml
+  - pangomm.yaml
+  - atkmm.yaml

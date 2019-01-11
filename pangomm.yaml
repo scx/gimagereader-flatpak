@@ -1,0 +1,10 @@
+name: pangomm
+config-opts:
+  - --disable-documentation
+  - --enable-maintainer-mode
+sources:
+  - type: archive
+    url: https://ftp.gnome.org/pub/GNOME/sources/pangomm/2.40/pangomm-2.40.2.tar.xz
+    sha256: 0a97aa72513db9088ca3034af923484108746dba146e98ed76842cf858322d05
+post-install:
+  - install -p -D -m 0644 "COPYING" -t "${FLATPAK_DEST}/share/licenses/pangomm/";

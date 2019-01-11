@@ -1,0 +1,24 @@
+name: gImageReader-gtk3
+buildsystem: cmake-ninja
+builddir: true
+config-opts:
+  - -DINTERFACE_TYPE:STRING=gtk
+  # disable update checker
+  - -DENABLE_VERSIONCHECK:BOOL=0
+sources:
+  - type: archive
+    url: https://github.com/manisandro/gImageReader/archive/v3.3.0.tar.gz
+    sha256: 9fbc33f0bb0479f0c65fbc6307dd57795bc3128d0349a2a017653c80f6089157
+  #- type: patch
+  #  path: gImageReader-3.3.0-ManageLanguages-gtk.patch
+cleanup:
+  - /share/applications
+  - /share/metainfo
+modules:
+  # There is no gvfs module in the Freedesktop/KDE runtime
+  - gvfs.yaml
+  - gtkmm.yaml
+  - gtksourceviewmm.yaml
+  - gtkspellmm.yaml
+  - libxml++.yaml
+  - pygobject.yaml
