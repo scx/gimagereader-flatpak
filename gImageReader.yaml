@@ -5,15 +5,9 @@ sources:
     url: https://github.com/manisandro/gImageReader/archive/v3.3.0.tar.gz
     sha256: 9fbc33f0bb0479f0c65fbc6307dd57795bc3128d0349a2a017653c80f6089157
   - type: file
-    path: gimagereader
-  - type: file
-    path: gimagereader.desktop
-  - type: file
-    path: gimagereader.appdata.xml
-  - type: file
     path: flatpak-copy.bash
 build-commands:
-  - install -p -D -m 0755 "gimagereader" -t "${FLATPAK_DEST}/bin/";
+  - ln -s "gimagereader-gtk" "${FLATPAK_DEST}/bin/gimagereader";
 post-install:
   - for f in {applications-education-language,application-pdf,dialog-cancel,dialog-close,dialog-ok,document-edit,document-export,document-preview,help-hint,object-order-front,text-plain}.png; do
     ./flatpak-copy.bash -o "${FLATPAK_DEST}/share/icons/hicolor" -f "${f}" -g "${f}" "packaging/win32/skel/share/icons/hicolor";
@@ -26,8 +20,6 @@ post-install:
     install -p -D -m 0644 "${icon_out}" -t "${FLATPAK_DEST}/share/icons/hicolor/${s}x${s}/apps/";
     done;
     install -p -D -m 0644 "${icon_in}" -t "${FLATPAK_DEST}/share/icons/hicolor/scalable/apps/";
-  - install -p -D -m 0644 "gimagereader.desktop" -t "${FLATPAK_DEST}/share/applications/";
-  - install -p -D -m 0644 "gimagereader.appdata.xml" -t "${FLATPAK_DEST}/share/appdata/";
   - install -p -D -m 0644 COPYING* -t "${FLATPAK_DEST}/share/licenses/gimagereader/";
 modules:
   - sane-backends.yaml
@@ -36,12 +28,12 @@ modules:
   - djvulibre.yaml
   - libzip.yaml
   - poppler.yaml
+  - enchant2.yaml
   - iso-codes.yaml
   - dictionaries.yaml
   - noto-fonts.yaml
   - noto-cjk.yaml
   - noto-emoji.yaml
   - jsmath-fonts.yaml
-  - adwaita-icon-theme.yaml
-  - gImageReader-qt5.yaml
+  #- adwaita-icon-theme.yaml
   - gImageReader-gtk3.yaml

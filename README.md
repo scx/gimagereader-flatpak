@@ -4,11 +4,9 @@
 
 ![gimagereader-gtk3-flatpak screenshot](gimagereader-gtk3-flatpak.png)
 
-![gimagereader-qt5-flatpak screenshot](gimagereader-qt5-flatpak.png)
-
 [Homepage](https://github.com/manisandro/gImageReader)
 
-This repo is about the flatpak package (Gtk+3/Qt5).
+This repo is about the flatpak package (Gtk+3).
 
 ## Instructions
 
@@ -46,53 +44,53 @@ See also:
 ### Prepare
 
 ```
-$ flatpak install "flathub" "org.kde.Sdk//5.11"
+$ flatpak install "flathub" "org.gnome.Sdk//3.28"
 ```
 
 ```
-$ flatpak install "flathub" "org.kde.Platform//5.11"
+$ flatpak install "flathub" "org.gnome.Platform//3.28"
 ```
 
 ### Build
 
 ```
-$ flatpak-builder "build" "com.github.manisandro.gImageReader.yaml" --force-clean --install-deps-from="flathub"
+$ flatpak-builder "build" "com.github.manisandro.gImageReader-gtk.yaml" --force-clean --install-deps-from="flathub"
 ```
 
 ### Test
 
 ```
-$ flatpak-builder --run "build" "com.github.manisandro.gImageReader.yaml" "sh"
+$ flatpak-builder --run "build" "com.github.manisandro.gImageReader-gtk.yaml" "sh"
 ```
 
 ### Install
 
 ```
-$ flatpak-builder --repo="repo" --force-clean "build" "com.github.manisandro.gImageReader.yaml"
+$ flatpak-builder --repo="repo" --force-clean "build" "com.github.manisandro.gImageReader-gtk.yaml"
 ```
 
 ```
-$ flatpak --user remote-add --no-gpg-verify "gimagereader" "repo"
+$ flatpak --user remote-add --no-gpg-verify "gimagereader-gtk3" "repo"
 ```
 
 ```
-$ flatpak --user install "gimagereader" "com.github.manisandro.gImageReader"
+$ flatpak --user install "gimagereader-gtk3" "com.github.manisandro.gImageReader-gtk"
 ```
 
 ### Run
 
 ```
-$ flatpak run "com.github.manisandro.gImageReader"
+$ flatpak run "com.github.manisandro.gImageReader-gtk"
 ```
 
 ### Uninstall
 
 ```
-$ flatpak --user uninstall "com.github.manisandro.gImageReader"
+$ flatpak --user uninstall "com.github.manisandro.gImageReader-gtk"
 ```
 
 ```
-$ flatpak --user remote-delete "gimagereader"
+$ flatpak --user remote-delete "gimagereader-gtk3"
 ```
 
 See also: [Building your first Flatpak](http://docs.flatpak.org/en/latest/first-build.html)
