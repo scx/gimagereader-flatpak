@@ -16,7 +16,7 @@ build-commands:
   - install -p -D -m 0755 "gimagereader" -t "${FLATPAK_DEST}/bin/";
 post-install:
   - for f in {applications-education-language,application-pdf,dialog-cancel,dialog-close,dialog-ok,document-edit,document-export,document-preview,help-hint,object-order-front,text-plain}.png; do
-    ./flatpak-copy.bash -o "/app/share/icons/hicolor" -f "${f}" -g "${f}" "packaging/win32/skel/share/icons/hicolor";
+    ./flatpak-copy.bash -o "${FLATPAK_DEST}/share/icons/hicolor" -f "${f}" -g "${f}" "packaging/win32/skel/share/icons/hicolor";
     done;
   - icon_in="data/icons/gimagereader.svg";
     icon_out="gimagereader.png";
@@ -45,4 +45,3 @@ modules:
   - adwaita-icon-theme.yaml
   - gImageReader-qt5.yaml
   - gImageReader-gtk3.yaml
-

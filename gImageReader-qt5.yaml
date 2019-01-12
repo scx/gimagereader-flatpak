@@ -11,6 +11,11 @@ sources:
     sha256: 9fbc33f0bb0479f0c65fbc6307dd57795bc3128d0349a2a017653c80f6089157
   - type: patch
     path: gImageReader-3.3.0-ManageLanguages-qt.patch
+  - type: shell
+    commands:
+      - find * -xtype f -name '*.cc' | while read -r file; do
+        sed -i -re 's!/usr/share!/app/share!g' "${file}";
+        done;
 cleanup:
   - /share/applications
   - /share/metainfo

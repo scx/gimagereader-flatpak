@@ -6,6 +6,8 @@
 
 ![gimagereader-qt5-flatpak screenshot](gimagereader-qt5-flatpak.png)
 
+![gimagereader-qt5-gnome-flatpak screenshot](gimagereader-qt5-gnome-flatpak.png)
+
 [Homepage](https://github.com/manisandro/gImageReader)
 
 This repo is about the flatpak package (Gtk+3/Qt5).
