@@ -36,6 +36,7 @@ modules:
   - djvulibre.yaml
   - libzip.yaml
   - poppler.yaml
+  - enchant2.yaml
   - iso-codes.yaml
   - dictionaries.yaml
   - noto-fonts.yaml
