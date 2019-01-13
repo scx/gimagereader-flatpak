@@ -21,7 +21,7 @@ sources:
     dest: data
   - type: shell
     commands:
-      - echo "StartupWMClass=gimagereader-gtk" >> "data/gimagereader.desktop.in";
+      - echo "StartupWMClass=gimagereader-@INTERFACE_TYPE@" >> "data/gimagereader.desktop.in";
 modules:
   # There is no gvfs module in the Freedesktop/KDE runtime
   #- gvfs.yaml
