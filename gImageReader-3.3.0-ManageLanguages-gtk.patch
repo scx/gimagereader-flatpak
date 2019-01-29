@@ -1,0 +1,16 @@
+diff -Naur gImageReader-3.3.0.orig/gtk/data/appmenu.ui gImageReader-3.3.0/gtk/data/appmenu.ui
+--- gImageReader-3.3.0.orig/gtk/data/appmenu.ui	2018-09-26 23:06:06.000000000 +0200
++++ gImageReader-3.3.0/gtk/data/appmenu.ui	2019-01-29 23:43:25.976603620 +0100
+@@ -7,10 +7,12 @@
+ 				<attribute name="label" translatable="yes">Redetect Languages</attribute>
+ 				<attribute name="action">app.redetectLangs</attribute>
+ 			</item>
++			<!--
+ 			<item>
+ 				<attribute name="label" translatable="yes">Manage Languages</attribute>
+ 				<attribute name="action">app.manageLangs</attribute>
+ 			</item>
++			-->
+ 			<item>
+ 				<attribute name="label" translatable="yes">Preferences</attribute>
+ 				<attribute name="action">app.preferences</attribute>
