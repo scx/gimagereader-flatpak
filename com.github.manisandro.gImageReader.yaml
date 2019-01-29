@@ -1,11 +1,7 @@
 app-id: com.github.manisandro.gImageReader
 runtime: org.kde.Platform
 # Although this application supports Qt5 >= 5.5, some problems with Qt < 5.10 have been reported
-# Qt5 from KDE 5.12 requires Linux kernel >= 3.17
-# https://github.com/flathub/flathub/issues/805
-# Unable to build glibmm on KDE 5.12
-# gimagereader-qt5 keeps crashing on KDE 5.12
-runtime-version: '5.11'
+runtime-version: '5.12'
 sdk: org.kde.Sdk
 command: gimagereader
 rename-appdata-file: gimagereader.appdata.xml
