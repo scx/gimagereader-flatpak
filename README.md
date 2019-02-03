@@ -99,10 +99,16 @@ See also: [Building your first Flatpak](http://docs.flatpak.org/en/latest/first-
 
 ### Known issues
 
-`gimagereader-gtk`:
- * Unable to hide the `Manage Languages` position from menu when using `System-wide paths` and using **PackageKit** doesn't make much sense in the sandboxed environment.
- * Unable to manage languages when using `User paths`: `Failed to fetch list of available languages: Failed to fetch list of available languages: ` (`gio.File.read_finish`: `Operation not supported` - probably missing required dependencies for **GVFS**, maybe the `http` backend?).
- * Unable to download dictionaries when using `User paths`: `Could note read https://cgit.freedesktop.org/libreoffice/dictionaries/tree/: .` (`gio.File.read_finish`: `Operation not supported` - probably missing required dependencies for **GVFS**, maybe the `http` backend?).
+#### `gimagereader-gtk`
+
+ * ~~Unable to hide the `Manage Languages` position from menu when using `System-wide paths` and using **PackageKit** doesn't make much sense in the sandboxed environment.~~
+ * ~~Unable to manage languages when using `User paths`: `Failed to fetch list of available languages: Failed to fetch list of available languages: ` (`gio.File.read_finish`: `Operation not supported` - probably missing required dependencies for **GVFS**, maybe the `http` backend?).~~
+ * ~~Unable to download dictionaries when using `User paths`: `Could note read https://cgit.freedesktop.org/libreoffice/dictionaries/tree/: .` (`gio.File.read_finish`: `Operation not supported` - probably missing required dependencies for **GVFS**, maybe the `http` backend?).~~
+
+See also:
+ * http://gtk.10911.n7.nabble.com/dynamic-menus-td93355.html
+ * https://bugzilla.gnome.org/show_bug.cgi?id=791175
+ * https://gitlab.gnome.org/GNOME/gtk/issues/987
 
 ### Are you the author of gImageReader?
 

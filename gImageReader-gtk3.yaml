@@ -10,6 +10,11 @@ sources:
     url: https://github.com/manisandro/gImageReader/archive/v3.3.0.tar.gz
     sha256: 9fbc33f0bb0479f0c65fbc6307dd57795bc3128d0349a2a017653c80f6089157
   - type: patch
+    path: gImageReader-3.3.0-fetchLanguageList.patch
+  # http://gtk.10911.n7.nabble.com/dynamic-menus-td93355.html
+  # https://bugzilla.gnome.org/show_bug.cgi?id=791175
+  # https://gitlab.gnome.org/GNOME/gtk/issues/987
+  - type: patch
     path: gImageReader-3.3.0-ManageLanguages-gtk.patch
   - type: shell
     commands:
